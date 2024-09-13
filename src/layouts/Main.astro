@@ -1,0 +1,25 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { title } = Astro.props;
+const description =
+  Astro.props.description ||
+  "My website where I write about things that interest me.";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} />
+  </head>
+  <body>
+    <div>
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
