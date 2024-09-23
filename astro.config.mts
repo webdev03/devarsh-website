@@ -5,7 +5,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: "https://devarsh.me",
-  output: "hybrid",
+  output: "server",
   integrations: [],
   adapter: cloudflare({
     imageService: "cloudflare"
