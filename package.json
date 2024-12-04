@@ -14,11 +14,15 @@
     "@astrojs/check": "0.9.4",
     "@astrojs/cloudflare": "12.0.0",
     "@astrojs/rss": "4.0.9",
+    "@astrojs/svelte": "^7.0.1",
+    "@giscus/svelte": "^3.0.0",
     "astro": "5.0.2",
+    "svelte": "^5.5.3",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
     "prettier": "^3.4.1",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-svelte": "^3.3.2"
   }
 }
