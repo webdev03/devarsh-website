@@ -12,8 +12,9 @@ const { title, description, pubDate } = Astro.props;
 ---
 
 <html lang="en">
+  <!--suppress HtmlRequiredTitleElement -->
   <head>
-    <BaseHead {...Astro.props} />
+    <BaseHead title={title} description={description} />
   </head>
   <body>
     <div>
