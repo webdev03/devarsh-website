@@ -2,6 +2,7 @@ import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import type { APIRoute } from "astro";
 
+// noinspection JSUnusedGlobalSymbols
 export const GET: APIRoute = async (context) => {
   const posts = await getCollection("blog");
   return rss({
