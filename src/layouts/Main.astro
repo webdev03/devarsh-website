@@ -1,7 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 
 type Props = {
   title: string;
@@ -9,11 +8,11 @@ type Props = {
   header?: boolean;
 };
 
-const { title } = Astro.props;
-const description =
-  Astro.props.description ||
-  "My website where I write about things that interest me.";
-const header = Astro.props.header ?? true;
+const {
+  title,
+  description = "My website where I write about things that interest me.",
+  header = true
+} = Astro.props;
 ---
 
 <html lang="en" style="">
@@ -21,12 +20,11 @@ const header = Astro.props.header ?? true;
     <BaseHead title={title} description={description} />
   </head>
   <body>
-    <div class={title === "Home" ? "gradient-1" : "gradient-2"}>
+    <div class={"main-container " + (title === "Home" ? "gradient-1" : "gradient-2")}>
       {header && <Header />}
       <main>
         <slot />
       </main>
-      <Footer />
     </div>
   </body>
 </html>

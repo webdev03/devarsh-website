@@ -61,12 +61,15 @@ body {
   line-height: 1.7;
 }
 
+.main-container {
+  min-height: 100vh;
+}
+
 main {
   width: 720px;
   max-width: calc(100% - 2em);
   margin: auto;
   padding: 3em 1em;
-  min-height: 35vh;
 }
 
 h1,
