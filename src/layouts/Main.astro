@@ -20,7 +20,10 @@ const {
     <BaseHead title={title} description={description} />
   </head>
   <body>
-    <div class={"main-container " + (title === "Home" ? "gradient-1" : "gradient-2")}>
+    <div
+      class={"main-container " +
+        (title === "Home" ? "gradient-1" : "gradient-2")}
+    >
       {header && <Header />}
       <main>
         <slot />
