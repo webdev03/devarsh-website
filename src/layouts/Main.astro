@@ -3,20 +3,26 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
+type Props = {
+  title: string;
+  description?: string;
+  header?: boolean;
+};
+
 const { title } = Astro.props;
 const description =
   Astro.props.description ||
   "My website where I write about things that interest me.";
+const header = Astro.props.header ?? true;
 ---
 
-<html lang="en">
-  <!--suppress HtmlRequiredTitleElement -->
+<html lang="en" style="">
   <head>
     <BaseHead title={title} description={description} />
   </head>
   <body>
-    <div>
-      <Header />
+    <div class={title === "Home" ? "gradient-1" : "gradient-2"}>
+      {header && <Header />}
       <main>
         <slot />
       </main>

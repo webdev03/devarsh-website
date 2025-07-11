@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import Blog from "../../layouts/Blog.astro";
 
 export const prerender = true;
@@ -11,6 +11,8 @@ export async function getStaticPaths() {
     props: post
   }));
 }
+
+type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { Content } = await post.render();
