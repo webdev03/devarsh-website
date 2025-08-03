@@ -14,6 +14,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/cloudflare": "^12.6.2",
     "@astrojs/rss": "^4.0.12",
+    "@lucide/astro": "^0.536.0",
     "astro": "^5.12.8",
     "typescript": "^5.9.2"
   },

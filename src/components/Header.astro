@@ -1,13 +1,15 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+
+import { House, Newspaper } from "@lucide/astro";
 ---
 
 <header>
   <nav>
     <h2><a href="/">devarsh.me</a></h2>
     <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/"><House /> Home</HeaderLink>
+      <HeaderLink href="/blog"><Newspaper />Blog</HeaderLink>
     </div>
     <div class="social-links">
       <a rel="me" href="https://tilde.zone/@neoroll" target="_blank">
@@ -69,6 +71,15 @@ import HeaderLink from "./HeaderLink.astro";
   nav a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
+  }
+
+  .internal-links,
+  .internal-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 0.4em;
   }
 
   .social-links {
