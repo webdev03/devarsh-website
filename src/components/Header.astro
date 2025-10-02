@@ -47,7 +47,23 @@ import { House, Newspaper } from "@lucide/astro";
   header {
     border-radius: 99999px;
     padding: 0.5em 2.5em;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.05),
+      0 4px 12px rgba(0, 0, 0, 0.08);
+    transition:
+      box-shadow 0.3s ease,
+      background 0.3s ease;
   }
+
+  header:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow:
+      0 3px 6px rgba(0, 0, 0, 0.08),
+      0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
   h2 {
     margin: 0;
     font-size: 1em;
@@ -56,7 +72,14 @@ import { House, Newspaper } from "@lucide/astro";
   h2 a,
   h2 a.active {
     text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
   }
+
+  h2 a:hover {
+    color: var(--accent);
+  }
+
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -98,12 +121,21 @@ import { House, Newspaper } from "@lucide/astro";
     align-items: center;
     text-decoration: none;
     color: rgb(var(--gray));
-    transition: color 0.2s ease-in-out;
+    transition:
+      color 0.2s ease-in-out,
+      transform 0.2s ease;
+    padding: 0.5em;
+    border-radius: 8px;
+  }
+  .social-links a:hover {
+    transform: translateY(-2px);
   }
   .social-links a:has(svg[astro-icon="social/mastodon"]):hover {
     color: #6364ff;
+    background: rgba(99, 100, 255, 0.1);
   }
   .social-links a:has(svg[astro-icon="social/github"]):hover {
     color: #24292e;
+    background: rgba(36, 41, 46, 0.1);
   }
 </style>

@@ -9,8 +9,10 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <Main title="Blog">
-  <h1>Blog</h1>
-  <p>Here's a list of all of my blog posts. Enjoy!</p>
+  <div class="blog-header">
+    <h1>Blog</h1>
+    <p>Here's a list of all of my blog posts. Enjoy!</p>
+  </div>
   <section>
     <ul>
       {
@@ -33,6 +35,17 @@ const posts = (await getCollection("blog")).sort(
 <style>
   main {
     width: 960px;
+  }
+  .blog-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .blog-header h1 {
+    font-size: 3.5em;
+    background: linear-gradient(135deg, #3939ef 0%, #6364ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   ul {
     display: flex;
@@ -59,6 +72,22 @@ const posts = (await getCollection("blog")).sort(
   }
   ul li a {
     display: block;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2em;
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.05),
+      0 4px 12px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  ul li a:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.08),
+      0 8px 20px rgba(0, 0, 0, 0.12);
   }
   ul li * {
     text-decoration: none;
