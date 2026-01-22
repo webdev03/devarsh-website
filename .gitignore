@@ -12,6 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+
 # environment variables
 .env
 .env.production
@@ -19,14 +20,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# IntelliJ based IDEs
-.idea
-/shelf/
-/workspace.xml
-/httpRequests/
-/mavenHomeManager.xml
-/dataSources/
-/dataSources.local.xml
-*.iml
-
-.wrangler/
+# jetbrains setting folder
+.idea/

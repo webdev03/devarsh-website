@@ -1,12 +1,43 @@
-# devarsh-website
+# Astro Starter Kit: Minimal
 
-This is my personal website built with Astro! Go to [devarsh.me](https://devarsh.me) to check it out.
+```sh
+bun create astro@latest -- --template minimal
+```
 
-## Setup
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-You will need [Bun](https://bun.sh) installed.
+## 🚀 Project Structure
 
-1. Install dependencies with `bun install --frozen-lockfile`
-2. Run `bun run dev` to start the development server
+Inside of your Astro project, you'll see the following folders and files:
 
-The site is deployed on Cloudflare Pages. You can get the files to deploy with `bun run build`. If you want to change the adapter, you can do so following the official Astro documentation for the adapter you want.
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun install`             | Installs dependencies                            |
+| `bun dev`             | Starts local dev server at `localhost:4321`      |
+| `bun build`           | Build your production site to `./dist/`          |
+| `bun preview`         | Preview your build locally, before deploying     |
+| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `bun astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
