@@ -19,14 +19,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# IntelliJ based IDEs
-.idea
-/shelf/
-/workspace.xml
-/httpRequests/
-/mavenHomeManager.xml
-/dataSources/
-/dataSources.local.xml
-*.iml
-
-.wrangler/
+# jetbrains setting folder
+.idea/

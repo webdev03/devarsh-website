@@ -1,12 +1,36 @@
-# devarsh-website
+# Astro + React + TypeScript + shadcn/ui
 
-This is my personal website built with Astro! Go to [devarsh.me](https://devarsh.me) to check it out.
+This is a template for a new Astro project with React, TypeScript, and shadcn/ui.
 
-## Setup
+## Adding components
 
-You will need [Bun](https://bun.sh) installed.
+To add components to your app, run the following command:
 
-1. Install dependencies with `bun install --frozen-lockfile`
-2. Run `bun run dev` to start the development server
+```bash
+npx shadcn@latest add button
+```
 
-The site is deployed on Cloudflare Pages. You can get the files to deploy with `bun run build`. If you want to change the adapter, you can do so following the official Astro documentation for the adapter you want.
+This will place the ui components in the `src/components` directory.
+
+## Using components
+
+To use the components in your app, import them in an `.astro` file:
+
+```astro
+---
+import { Button } from "@/components/ui/button"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro App</title>
+  </head>
+  <body>
+    <div class="grid h-screen place-items-center content-center">
+      <Button>Button</Button>
+    </div>
+  </body>
+</html>
+```
