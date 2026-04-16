@@ -1,17 +1,53 @@
 ---
 import Layout from "@/layouts/main.astro"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
+import CurrentTime from "@/components/CurrentTime"
+import { ArrowRight } from "lucide-react"
 ---
 
 <Layout>
-  <div class="flex p-6">
-    <div class="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-      <div>
-        <h1 class="font-medium">Project ready!</h1>
-        <p>You may now add components and start building.</p>
-        <p>We've already added the button component for you.</p>
-        <Button client:load className="mt-2">Button</Button>
+  <main class="relative isolate overflow-hidden">
+    <section
+      class="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 pt-20 pb-16 md:pt-24"
+    >
+      <div class="max-w-3xl space-y-4">
+        <h1
+          class="text-4xl leading-tight font-semibold text-balance md:text-6xl md:leading-tight"
+        >
+          hey, i'm
+          <span
+            class="bg-linear-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent transition-all hover:tracking-wider"
+            >devarsh</span
+          >!
+        </h1>
+        <p class="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          teenager from new zealand doing things on the internet
+        </p>
+        <div class="flex flex-1 gap-x-4 text-sm text-muted-foreground">
+          <CurrentTime client:load />
+        </div>
       </div>
-    </div>
-  </div>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href="/contact"
+          class={buttonVariants({
+            className:
+              "group bg-linear-to-r from-indigo-600 to-sky-500 text-primary-foreground transition-colors hover:from-indigo-500 hover:to-sky-400",
+          })}
+        >
+          contact me
+          <ArrowRight
+            className="size-4 transition-transform group-hover:-rotate-45"
+          />
+        </a>
+        <a href="/blog" class={buttonVariants({ variant: "secondary" })}>
+          read blog
+        </a>
+        <a href="/projects" class={buttonVariants({ variant: "secondary" })}>
+          view projects
+        </a>
+      </div>
+    </section>
+  </main>
 </Layout>

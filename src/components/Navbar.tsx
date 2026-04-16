@@ -1,18 +1,16 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 
 export default function MainNav() {
   return (
-    <header className="sticky top-0 z-50 bg-background">
-      <div className="mx-auto flex items-center justify-between gap-8 px-6 py-4">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-8 px-6 py-4">
         <a href="/" className="hover:font-light hover:tracking-wider">
-          <span className="transition-all bg-linear-to-bl from-indigo-500 to-blue-400 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent transition-all">
             devarsh
           </span>
           .me
@@ -26,7 +24,9 @@ export default function MainNav() {
               <NavigationMenuLink href="/blog">blog</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/guestbook">guestbook</NavigationMenuLink>
+              <NavigationMenuLink href="/guestbook">
+                guestbook
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href="/contact">contact</NavigationMenuLink>
